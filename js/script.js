@@ -3,14 +3,34 @@ const pipe = document.querySelector('.pipe');
 const clounds = document.querySelector('.clouds');
 
 
-const jump = () => {
-    mario.classList.add('jump');
+const playSom = (elemento) => {
+    const element = document.querySelector(`#${elemento}`);
+    element.play();
+};
 
-    setTimeout(() => {
-        mario.classList.remove('jump')
-
-    }, 500);
+const stopSom = (elemento) => {
+    const element = document.querySelector(`#${elemento}`);
+    element.pause();
 }
+
+
+const jump = (event) => {
+
+    if(event.key == 'ArrowUp'){
+        mario.classList.add('jump');
+        playSom('som_pular');
+        
+
+        
+        
+        setTimeout(() => {
+            mario.classList.remove('jump')
+    
+        }, 500);
+    }
+    
+    
+};
 
 const loop = setInterval (()=> {
 
@@ -39,6 +59,9 @@ const loop = setInterval (()=> {
 
 }, 10);
 
-
-
 document.addEventListener('keydown', jump);
+   
+ 
+
+
+
