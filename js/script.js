@@ -14,15 +14,13 @@ const stopSom = (elemento) => {
 }
 
 
-const jump = (event) => {
+const jump = () => {
 
-    if(event.key == 'ArrowUp'){
+   
         mario.classList.add('jump');
         playSom('som_pular');
-        
-
-        
-        
+  
+         
         setTimeout(() => {
             mario.classList.remove('jump')
     
@@ -30,7 +28,7 @@ const jump = (event) => {
     }
     
     
-};
+
 
 const loop = setInterval (()=> {
 
@@ -52,6 +50,7 @@ const loop = setInterval (()=> {
         mario.src = './imagens/game-over.png';
         mario.style.width = '75px';
         mario.style.marginleft = '50px';
+        playSom('dead');
 
         clearInterval(loop);
 
