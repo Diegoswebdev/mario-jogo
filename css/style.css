@@ -1,8 +1,12 @@
+@charset "UTF-8";
+
 @font-face {
     font-family: 'mario';
-    src: url("fonts/SuperMario256.ttf");
+    src: url("/fonts/SuperMario256.ttf");
   }
 
+  @import url('https://fonts.googleapis.com/css2?family=Jersey+10+Charted&display=swap');
+  
 * {
     margin: 0;
     padding: 0;
@@ -11,18 +15,17 @@
 
 body{
     
-    background: linear-gradient(to bottom, rgba(255, 
+    background: linear-gradient(to bottom, rgba(255,
     255, 0, 0.699), rgba(255, 0, 0, 0.644));
-    background-repeat: no-repeat;
-    padding-bottom: 100vb;
+    padding-bottom: 40vb;
  
 }
 
 h1{
-    font-family: 'mario', sans-serif;
+    font-family: 'mario';
     color: brown;
     text-align: center;
-    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.384);
+    text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.384);
     padding: 10px;
 }
 
